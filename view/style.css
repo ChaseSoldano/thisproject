@@ -108,3 +108,17 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
+}
+h3:hover {
+    -webkit-transform: rotateX(45deg);
+    /*-ms-transform: rotateX(45deg);*/
+     transform: rotateX(45deg);
+}
+h1:hover {
+    -webkit-transform: rotateX(150deg);
+    transform: rotateX(150deg);
+
+}
+body {
+    background: #D3D3D3 url("smiley.gif") no-repeat fixed center;
+}
