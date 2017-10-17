@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- end bootstrap -->
-    <style media="screen">
+    <link rel="stylesheet" href="style.css">
+    <style>
         * {
           margin: 0;
           padding: 0;
@@ -22,10 +23,7 @@
             height: 400px;
             background-color: grey;
         }
-      ul {
-        margin: 0;
-        padding: 0;
-      }
+
     </style>
 
   </head>
@@ -35,31 +33,51 @@
       <h1>Test | Event Finder App</h1>
 
 
-
-    <div id="googlestyle">
+    <div id="googlestyle"> <!--googlemaps-->
       <h3>My Google Maps Demo</h3>
       <div id="map"></div>
 
+    </div><br><!--end of googlemaps -->
+
+
+
+    <div id="nameBox">
+        <label>Event Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a event here">
+        <hr />
+        <label>Location Address:</label>
+        <input type="text" ng-model="yourLocation" placeholder="Enter location">
+        <hr />
+        <label>Zip Code:</label>
+        <input type="number" ng-model="yourZip" placeholder="Enter zip">
+        <hr />
+
+        <h2>Type in a event {{ yourName }}</h2>
+        <h2>Type in location {{ yourLocation }}</h2>
+        <h2>Zip code: {{ yourZip }}</h2>
     </div><br>
 
+    <div id="myDIV" class="header">
+    <h2 style="margin:5px">Finder List</h2>
+      <input type="text" id="myInput" ng-model= "eventList" placeholder="Events...">
+    <span onclick="newElement()" class="addBtn">Add</span>
 
-    <div id="myDiv" class="header">
-        <input type="text" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">ADD</span>
-    </div>
-
+  </div><br>
+    <h3>Type in event: {{ eventList }}</h3>
     <div id="eventlist">
-        <u id='myUL'>
+        <ul id='myUL'>
             <li>Art Show</li>
             <li>Bull Ride</li>
-
+            <li>Food Truck </li>
+            <li>Travel Destination</li>
+            <li>Game party </li>
+            <li>Food/Market</li>
+            <li>Yard sales'</li>
         </ul>
-    </div>
-    <script src="node_modules/angular/angular.min.js"></script>
-       <script src="app.js"></script>
-
+    </div><!--end of event list --><br>
+<div ng-view></div>
     <script>
-          function initMap (){
+          function initMap () {
                 var location = {lat: 29.424122, lng: -98.493628};
                 var map = new google.maps.Map(document.getElementById("map"), {
                       zoom: 4,
@@ -74,6 +92,8 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqHvoyWiV0-x4HgZUkjX9k19aaiwpapfs&callback=initMap"
     type="text/javascript"></script>
-
+    <script src="node_modules\angular\angular.min.js"></script>
+       <script src="js/app.js"></script>
+       <script src="js/event.js"></script>
   </body>
 </html>
