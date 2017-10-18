@@ -13,6 +13,9 @@
 
     <!-- end bootstrap -->
     <link rel="stylesheet" href="style.css">
+    <script src="node_modules\angular\angular.min.js"></script>
+       <script src="js/app.js"></script>
+       <script src="js/event.js"></script>
     <style>
         * {
           margin: 0;
@@ -58,7 +61,7 @@
         <h2>Type in location: {{ yourLocation }}</h2>
         <h2>Zip code: {{ yourZip }}</h2>
         <!--end of form -->
-      
+
     </div><br>
 
         <div id="myDIV" class="header"><!--even list finder -->
@@ -96,8 +99,6 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqHvoyWiV0-x4HgZUkjX9k19aaiwpapfs&callback=initMap"
     type="text/javascript"></script>
-    <script src="node_modules\angular\angular.min.js"></script>
-       <script src="js/app.js"></script>
-       <script src="js/event.js"></script>
+
   </body>
 </html>
