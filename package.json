@@ -1,11 +1,11 @@
 {
   "name": "thisproject",
   "version": "1.0.0",
-  "description": "",
+  "description": "Final project for SCI night class.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "angular": "^1.6.6",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "mocha": "^4.0.1",
     "mongoose": "^4.12.1"
   }
 }
