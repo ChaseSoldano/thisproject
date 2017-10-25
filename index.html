@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Test | Event Finder App</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -13,10 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- end bootstrap -->
-    <link rel="stylesheet" href="style.css">
-    <script src="node_modules\angular\angular.min.js"></script>
-       <script src="js/app.js"></script>
-       <script src="js/event.js"></script>
+    <link rel="stylesheet" href="Public\Resources\css\style.css">
+
     <style>
         * {
           margin: 0;
@@ -28,17 +25,18 @@
             height: 400px;
             background-color: grey;
         }
-
     </style>
 
   </head>
 
   <body>
     <div class="container" >
-      <h1>Test | Event Finder App</h1><br>
+      <h1>Test | Event Finder App</h1>
+      <input type="text" ng-model="">
+      {{text}}
 
     <div id="googlestyle"> <!--googlemaps-->
-
+      <h3>My Google Maps Demo</h3>
       <div id="map"></div>
 
     </div><br><!--end of googlemaps -->
@@ -53,7 +51,7 @@
         <input type="text" ng-model="yourLocation" placeholder="Enter location">
         <hr />
         <label>Zip Code:</label>
-        <input type="number" ng-model="yourZip" placeholder="Enter zip">
+        <input type="text" ng-model="yourZip" placeholder="Enter zip">
         <hr />
 
         <h2>Type in a event: {{ yourName }}</h2>
@@ -69,7 +67,7 @@
             <span onclick="newElement()" class="addBtn">ADD</span>
         </div><br>
 
-    <div id="eventlist">
+    <div ng-model="eventList">
       <h3>Type in event: {{ eventList }}</h3>
         <ul id='myUL'>
             <li>Art Show</li>
@@ -94,10 +92,11 @@
                       map: map
                 });
           }
-
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqHvoyWiV0-x4HgZUkjX9k19aaiwpapfs&callback=initMap"
     type="text/javascript"></script>
-
+    <script src="node_modules\angular\angular.min.js"></script>
+       <script src="Public\Resources\js\app.js"></script>
+       <script src="Public\Resources\js\event.js"></script>
   </body>
 </html>
