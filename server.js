@@ -1,8 +1,16 @@
 const express = require('express');
 const path = require("path");
 const bodyParser = require("body-parser");
+const connect = require('connect');
+const errorhandler = require('errorhandler');
 
+const app = connect();
 const app = express();
+
+if (process.env.NODE_ENV === 'development') {
+  // only use in development
+  app.use(errorhandler())
+};
 
 app.set('port', 3000);
 
