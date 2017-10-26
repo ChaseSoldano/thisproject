@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server",
-    "test": "mocha"
-  },
-  "repository": {
+    "test": "mocha",
+}
+
+  "repository" {
     "type": "git",
     "url": "git+https://github.com/ChaseSoldano/thisproject.git"
   },
@@ -25,4 +26,3 @@
     "mocha": "^4.0.1",
     "mongoose": "^4.12.1"
   }
-}
