@@ -1,4 +1,4 @@
-const mongoose = require ('mongoos');
+const mongoose = require ('mongoose');
 const Schema = mongoose.Schema;
 
 
@@ -6,8 +6,6 @@ const eventSchema = new Schema({
     date: 'number',
     location: 'string',
     time: 'number',
-
-
 
 });
 
