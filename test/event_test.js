@@ -1,9 +1,9 @@
 const assert = require ('assert');
-const  eventSchema = require ('../controllers/view/event_schema');
+const  eventSchema = require ('../controllers/chaseschema.js');
 
 
 describe ('saving records', function (){
-
+      this.timeout(10000);
 it('saves an event', function(done){
 
   var char = new eventSchema({
