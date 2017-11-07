@@ -17,12 +17,12 @@ app.use(express.static(__dirname + "/view"));
 app.use(express.static(__dirname + "/node_modules"));
 app.use(express.static(__dirname + "/controllers"));
 
-app.get('/', function (req, res) {
-  res.send('testing port 3000! Its working!!!!')
-});
+// app.get('/', function (req, res) {
+//   res.send('testing port 3000! Its working!!!!')
+// });
 
 app.get('/', function (req, res) {
-  res.sendFile(_dirname +'/Public/index.html');
+  res.sendFile(__dirname +'/Public/index.html');
 });
 
 var server = app.listen(app.get('port'), function() {
