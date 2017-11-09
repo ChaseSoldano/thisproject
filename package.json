@@ -7,7 +7,10 @@
     "start": "nodemon server",
     "test": "mocha"
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 78dc8dc65091f961b4c2b71c69005a08d171fbe3
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChaseSoldano/thisproject.git"
@@ -26,4 +29,8 @@
     "mocha": "^4.0.1",
     "mongoose": "^4.12.1"
   }
+<<<<<<< HEAD
   }
+=======
+}
+>>>>>>> 78dc8dc65091f961b4c2b71c69005a08d171fbe3
