@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+
+    <!--Angular link-->
+        <script src="angular\angular.js"></script>
+    <!-- app.js link -->
+        <script src="Resources\js\app.js"></script>
+    <!-- jQuery link -->
+      <script src="node_modules\jquery\dist\jquery.min.js"></script>
+    <!-- end -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- end bootstrap -->
+  </head>
+  <body>
+
+          <div ng-controller="searchBoxCtrl">
+            <div class="page-header">
+                <h1>
+                  <!-- Heading goes here -->
+                  Search the Table - Filter Example
+                </h1>
+                <!--search box -->
+                <div style="padding:20px 0px 60px 0px">
+              			<span class="col-md-1" style="font-weight:bold">Search</span>
+              			<span class="col-md-3">
+              			<input type="text" class="form-control ng-valid ng-dirty" ng-model="searchKeyword">
+              			</span>
+		            </div><!--end searchBox -->
+
+                  <table class="table"><!--searchTable-->
+                      <tbody>
+
+                        <td style="vertical-align:top">
+                          	<tr>
+                          		<th> Event Name
+                          		</th>
+                          		<th>Address of Event
+                          		</th>
+                          		<th>Time of Event
+                          		</th>
+                          		<th>Date of Event
+                          		</th>
+                          	</tr>
+
+                          	<tr ng-repeat="event in eventFinder  | filter: searchKeyword "><!-- angular search filter -->
+                          		<td>
+                                {{ event.names }}
+                          		</td>
+                          		<td>
+                                {{ event.address }}
+                          		</td>
+                          		<td>
+                                {{ event.price }}
+                          		</td>
+                              <td>
+                              </td>
+                          		<td>
+                          		<input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(company.name)"/><!--remove button-->
+                          		</td>
+                          	</tr>
+                        </td>
+
+                        <td style="width:50%;vertical-align: top;padding-left:100px;">
+                          <div padding="padding-bottom:20px">
+                             <h3>Add an Event</h3>
+                             <p>This is for vendors who would like to add there location.</p>
+                             <form class="form-horizontal ng-pristine ng-valid" role="form" ng-submit="addRow()">
+                               <div class="form-group"><!--form-group 'name' input -->
+                                  <label class="col-md-2 control-label">Name</label>
+                                  <div class="col-md-4">
+                                    <input type="text" class="form-control ng-pristine ng-valid" name="names" ng-model="names" />
+                                  </div>
+                               </div><!-- end of form-group 'name' input -->
+
+                               <div class="form-group"><!--form-group 'event' input -->
+                                  <label class="col-md-2 control-label">Event</label>
+                                  <div class="col-md-4">
+                                    <input type="text" class="form-control ng-pristine ng-valid" name="event" ng-model="events" />
+                                  </div>
+                              </div><!-- end of form-group 'event' input -->
+
+                               <div class="form-group"><!--form-group 'price' input -->
+                                  <label class="col-md-2 control-label">Table Price</label>
+                                  <div class="col-md-4">
+                                    <input type="text" class="form-control ng-pristine ng-valid" name="price" ng-model="price" />
+                                  </div>
+                               </div><!-- end of form-group 'price' input -->
+
+                               <div class="form-group"><!-- submit button for form -->
+                                 <div style="padding-left:100px">
+                                    <input type="submit" value="Submit" class="btn btn-primary">
+                                 </div>
+                               </div><!-- end submit -->
+                             </form>
+                          </div>
+                          </td>
+
+                    </tbody>
+                </table><!--end of searchTable -->
+              </div>
+          </div>
+
+
+
+  </body>
+</html>
