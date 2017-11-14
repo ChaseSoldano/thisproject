@@ -1,4 +1,26 @@
-<div ng-controller="login.controller" >
+<head>
+  <style>
+  h1 {
+    text-align: center;
+    font-size: 300%;
+  }
+
+  div{
+      text-align: center;
+      font-size: 250%;
+    }
+  input{
+      text-align: center;
+      font-size: 100%;
+    }
+  button{
+      button-align: center;
+      font-size: 250%;
+    }
+    </style>
+</head>
+<body>
+<h1>Log In</h1>
 <form ng-submit="vm.onSubmit()">
   <div class="form-group">
     <label for="email">Email address</label>
@@ -11,3 +33,4 @@
   <button type="submit" class="btm btn-default">Sign in</button>
 </form>
 </div>
+</body>
