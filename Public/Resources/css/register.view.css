@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+  font-size: 300%;
+}
+
+div{
+    text-align: center;
+    font-size: 250%;
+  }
+input{
+    text-align: center;
+    font-size: 100%;
+  }
+button{
+    font-size: 250%;
+  }
+body{
+  background:linear-gradient(to bottom left,yellow,red);;
+}
