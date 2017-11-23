@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/eventDb');
+mongoose.connect('mongodb://localhost:27017/expressDb');
 
 mongoose.connection.once('open', function () {
   console.log('connection has been made');

@@ -1,4 +1,4 @@
- var Models = require("C:/Users/jpatt/workspace/thisproject/models/models.js");
+ var Models = require("mongodb://localhost/expressDB");
 
  var User = new Models.User({
     username: "username",

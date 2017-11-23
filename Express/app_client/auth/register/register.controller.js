@@ -14,12 +14,8 @@ module.export.register = function(req, res) {
       "token": token
     });
   });
-<<<<<<< HEAD
-};s
-=======
-};
->>>>>>> 55af5e4ea3298c483cae828d3115c310b582687d
 
+};
 function registerCtrl($location, authentication) {
   var vm = this;
 
@@ -39,3 +35,5 @@ function registerCtrl($location, authentication) {
        $location.path('profile');
      });
   };
+
+  

@@ -1,7 +1,7 @@
 (function () {
 
   angular
-   .module('meanApp')
+   .module('myApp')
    .service('authentication', authentication);
 
    authentication.$inject = ['$http', '$window'];
