@@ -1,0 +1,20 @@
+<div id="googlestyle"> <!--googlemaps-->
+     <h3>My Google Maps Demo</h3>
+     <div id="map"></div>
+
+</div><br>
+<script>
+function initMap () {
+      var location = {lat: 29.424122, lng: -98.493628};
+      var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: location
+      });
+      var marker = new google.maps.Marker({
+            position: location,
+            map: map
+      });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqHvoyWiV0-x4HgZUkjX9k19aaiwpapfs&callback=initMap"
+type="text/javascript"></script>

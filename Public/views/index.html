@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html  ng-app="eventApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Test | Event Finder App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
+
+    <!-- end bootstrap -->
+
+    <!--style and script tags -->
+    <link rel="stylesheet" href="Public/css/style.css">
+    <link rel="stylesheet" href="Public/css/map.css">
+
+    <!---end of tags -->
+
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="container" >
+        <!--this is where navbar goes-->
+            <nav class="nav navbar-default">
+                <div class="container-fluid">
+                    <a class="" href="index.html">Event Finder App</a>
+                </div>
+
+                <a ui-sref="red">Red</a>
+                <a ui-sref="green">Green</a>
+                <a ui-sref="blue">Blue</a>
+
+            </nav>
+        <!--end -->
+        <!-- menu icon bars -->
+
+        <div class="bar1"></div>
+          <div class="bar2"></div>
+            <div class="bar2"></div>
+
+      <!--menu end -->
+
+
+    </div>
+
+  <h1>Test  Event Finder App <a ui-sref="events"><button type="button" name="">Events</button></a></h1>
+
+
+    <div class="eventlist"><!-- Theresa H new event list -->
+        <div ui-view></div>
+    </div>
+
+
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="Public/app.js"></script>
+    <script type="text/javascript" src="Public/Resources/js/controllers.js"></script>
+
+  </body>
+</html>

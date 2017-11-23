@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var Users = require("C:/Users/jpatt/workspace/thisproject/models/Users.js"); /* Imports the Users module. It contains the user schema we need. */
+var Users = require("/models/Users.js"); /* Imports the Users module. It contains the user schema we need. */
 mongoose.connect("mongodb://localhost/users"); //users is the database name.
 
 var db = mongoose.connection;

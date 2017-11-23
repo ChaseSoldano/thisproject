@@ -1,4 +1,4 @@
- var Models = require("C:/Users/jpatt/workspace/thisproject/models/models.js");
+ var Models = require("/models/models.js");
 
  var User = new Models.User({
     username: "username",

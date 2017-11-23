@@ -2,23 +2,19 @@ const express = require('express');
 const path = require("path");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
-const errorhandler = require("errorhandler");
+// const errorhandler = require("errorhandler");
+let eventController = require(__dirname + '/controllers/eventController.js');
 
 // const app = connect();
-const app = express();
-
+const server = express();
+mongoose.connect('mongodb://localhost/eventsDB');
 
 // app.set('port', 27017);
-if (process.env.NODE_ENV === 'development') {
-  // only use in development
-  app.use(errorhandler())
-};
 
 //app.set('port', 3000);
 
-app.use(bodyParser.urlencoded({extended: false}));
-// parse application/json
-app.use(bodyParser.json());
+server.use(bodyParser.urlencoded({extended: false}));
+server.use(bodyParser.json());
 
 
 //connecting to MongoDB
@@ -30,25 +26,31 @@ app.use(bodyParser.json());
 // db = conn.getDB("meanapp");
 //db = connect("localhost:27017/meanapp");
 // app.use(express.static(_dirname+'/Public'));
-app.use(express.static(__dirname + "/view"));
-app.use(express.static(__dirname + "/node_modules"));
-app.use(express.static(__dirname + "/controllers"));
-app.use(express.static(__dirname + "/Public"));
+
+// server.use(express.static(__dirname + "/views"));
+server.use('/node_modules', express.static(__dirname + "/node_modules"));
+// server.use(express.static(__dirname + "/controllers"));
+server.use('/Public', express.static(__dirname + "/Public"));
 
 // app.get('/', function (req, res) {
 //   res.send('testing port 3000! Its working!!!!')
 // });
 
-app.get('/', function (req, res) {
-  res.sendFile(__dirname +'/Public/index.html');
+server.get('/', function (req, res) {
+  res.sendFile(__dirname +'/Public/views/index.html');
 });
+server.get('/events', eventController.listEvents);
+server.get('/events:id', eventController.detailEvent);
+server.post('/events', eventController.createEvent);
+server.put('/events:id', eventController.updateEvent);
+server.delete('/events/:id', eventController.deleteEvent);
 
 // var server = app.listen(app.get('port'), function() {
 //   var port = server.address().port;
 //   console.log('running on server ' + port);
 // });
 const port = 3000;
-app.listen(port, () => {
+server.listen(port, () => {
   console.log("server running on port "+port);
 });
-exports = module.express = app;
+exports = module.express = server;
