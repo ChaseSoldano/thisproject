@@ -17,6 +17,7 @@
     <!--style and script tags -->
     <link rel="stylesheet" href="Public/css/style.css">
     <link rel="stylesheet" href="Public/css/map.css">
+    <link rel="stylesheet" href="Public/css/nav-style.css">
 
     <!---end of tags -->
 
@@ -25,24 +26,66 @@
   <body>
 
     <div class="header">
+       <div class="navbar-update">
+
+                     <nav class="navbar">
+                       <div class="toggle" onclick="openSlideMenu()">
+                             <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+                             <!-- menu icon bars -->
+                             <div class="bar1"></div>
+                               <div class="bar2"></div>
+                                 <div class="bar2"></div>
+                       </div>
+                       <!-- ^=hamburger icon -->
+                        <ul class="navbar-nav">
+                           <!-- <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Contact</a></li> -->
+                           <a ui-sref="red">Home</a>
+                           <a ui-sref="green">About</a>
+                           <a ui-sref="blue">Contact</a>
+                        </ul>
+                        
+                        <div class="user-header-drop down">
+                              <img
+                              src=
+                              "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
+                              width="44" height="44" >
+                        </div>
+
+                        <ul id="sideBtns" class='nav navbar-nav navbar-right'>
+                             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                           </ul>
+                     </nav>
+              <!-- slide menu -- >
+              <!--side bar-->
+             <div id="side-menu" class="side-nav">
+                  <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                  <a href="#">Home</a>
+                  <a href="#">Account</a>
+                  <a href="#">Location</a>
+                  <a href="#">Sign Out</a>
+             </div>
+
+              <!--end slide menu -->
+
+       </div>
       <div class="container" >
         <!--this is where navbar goes-->
-            <nav class="nav navbar-default">
+
+            <!-- <nav class="nav navbar-default">
                 <div class="container-fluid">
                     <a class="" href="index.html">Event Finder App</a>
                 </div>
 
                 <a ui-sref="red">Red</a>
                 <a ui-sref="green">Green</a>
-                <a ui-sref="blue">Blue</a>
+                <a ui-sref="blue">Blue</a> -->
 
             </nav>
         <!--end -->
-        <!-- menu icon bars -->
 
-        <div class="bar1"></div>
-          <div class="bar2"></div>
-            <div class="bar2"></div>
 
       <!--menu end -->
 
@@ -56,6 +99,16 @@
         <div ui-view></div>
     </div>
 
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width='250px';
+              document.getElementById('main').style.marginLeft='250px';
+        }
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width='0';
+              document.getElementById('main').style.marginLeft='0';
+        }
+    </script>
 
 
     <script src="node_modules/angular/angular.min.js"></script>
