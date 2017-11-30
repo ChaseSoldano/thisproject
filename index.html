@@ -45,12 +45,34 @@
                            <a ui-sref="green">About</a>
                            <a ui-sref="blue">Contact</a>
                         </ul>
-                        
-                        <div class="user-header-drop down">
-                              <img
-                              src=
-                              "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
-                              width="44" height="44" >
+
+                        <!-- <div class="user-dropdown">
+                            <div class="dropimg">
+
+                                        <img
+                                        src=
+                                        "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
+                                        class="dropbtn" width="44" height="44" >
+
+                            </div>
+                            <div class="dropdown-content">
+                                <a href="#">signout</a>
+                                <a href="#">account</a>
+                                <a href="#">setting</a>
+                            </div>
+
+                        </div> -->
+
+                        <div class="dropdown">
+                          <img
+                          src=
+                          "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
+                          class="dropbtn" onclick="myFunction()" width="44" height="44" >
+                          <div class="dropdown-content"  id="myDropdown">
+                            <a href="#">signout</a>
+                            <a href="#">account</a>
+                            <a href="#">setting</a>
+                          </div>
                         </div>
 
                         <ul id="sideBtns" class='nav navbar-nav navbar-right'>
@@ -99,17 +121,8 @@
         <div ui-view></div>
     </div>
 
-    <script>
-        function openSlideMenu(){
-            document.getElementById('side-menu').style.width='250px';
-              document.getElementById('main').style.marginLeft='250px';
-        }
-        function closeSlideMenu(){
-            document.getElementById('side-menu').style.width='0';
-              document.getElementById('main').style.marginLeft='0';
-        }
-    </script>
-
+    <script src="Public\frontend-js\slide.js"> </script>
+    <script src="Public\frontend-js\nav-dropdown.js">  </script>
 
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-resource/angular-resource.min.js"></script>
