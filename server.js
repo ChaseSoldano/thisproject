@@ -17,21 +17,21 @@ app.use(express.static(__dirname + "/view"));
 app.use(express.static(__dirname + "/node_modules"));
 app.use(express.static(__dirname + "/controllers"));
 
-<<<<<<< HEAD
+
 // app.get('/', function (req, res) {
 //   res.send('testing port 3000! Its working!!!!')
 // });
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname +'/Public/index.html');
-=======
+
 app.get('/', function (req, res) {
   res.send('testing port 3000! Its working!!!!')
 });
 
 app.get('/', function (req, res) {
-  res.sendFile(_dirname +'/Public/index.html');
->>>>>>> 78dc8dc65091f961b4c2b71c69005a08d171fbe3
+  res.sendFile(__dirname +'/Public/index.html');
+
 });
 
 var server = app.listen(app.get('port'), function() {
