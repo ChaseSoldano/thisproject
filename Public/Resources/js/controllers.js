@@ -23,6 +23,11 @@ eventApp.controller("eventsController", ['$scope', '$resource',
     });
   }
 
+$scope.deleteEvent = (item) => {
+  var index = $scope.events.indexOf(item);
+  $scope.events.splice(index, 1);
+
+}
 
 
 }]);
