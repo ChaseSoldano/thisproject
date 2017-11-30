@@ -1,6 +1,11 @@
 var mongoose = require("mongoose");
+<<<<<<< HEAD
 var Users = require("mongodb://localhost/expressDB"); /* Imports the Users module. It contains the user schema we need. */
 //mongoose.connect("mongodb://localhost/users"); //users is the database name.
+=======
+var Users = require("/models/Users.js"); /* Imports the Users module. It contains the user schema we need. */
+mongoose.connect("mongodb://localhost/users"); //users is the database name.
+>>>>>>> a4870088ce3bdce32469a931155622a3fd75000e
 
 var db = mongoose.connection;
 

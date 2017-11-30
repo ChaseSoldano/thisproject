@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const errorhandler = require('errorhandler');
 let eventController = require(__dirname + '/controllers/eventController');
 
+
 // const app = connect();
 const server = express();
 
@@ -25,21 +26,23 @@ server.use(bodyParser.json());
 //server.use(express.static(__dirname + "/views"));
 server.use('/node_modules', express.static(__dirname + "/node_modules"));
 //server.use(express.static(__dirname + "/controllers"));
-server.use('/Punlic', express.static(__dirname + "/Public"));
+server.use('/Public', express.static(__dirname + "/Public"));
 
 // app.get('/', function (req, res) {
 //   res.send('testing port 3000! Its working!!!!')
 // });
 
 server.get('/', function (req, res) {
- res.sendFile(__dirname +'/index.html');
+ res.sendFile(__dirname +'/Public/views/index.html');
 });
-
-server.get('/events', eventController.listEvent);
+server.get('/events', eventController.listEvents);
 server.get('/events/:id', eventController.detailEvent);
 server.post('/events', eventController.createEvent);
 server.put('/events/:id', eventController.updateEvent);
 server.delete('/events/:id', eventController.deleteEvent);
+
+
+
 
 const port = 3000;
 server.listen(port, () =>{

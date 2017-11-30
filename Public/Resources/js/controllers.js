@@ -1,8 +1,10 @@
-eventApp.controller("eventsController", ['$scope', 'resource',
+eventApp.controller("eventsController", ['$scope', '$resource',
 ($scope,$resource) => {
   let Event = $resource('/events');
 
-  Event.query((result) => {
+
+
+  Event.query((results) => {
     $scope.events = results;
   });
 
@@ -20,4 +22,7 @@ eventApp.controller("eventsController", ['$scope', 'resource',
       $scope.description = "";
     });
   }
-}])
+
+
+
+}]);

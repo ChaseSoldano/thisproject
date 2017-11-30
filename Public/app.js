@@ -1,26 +1,27 @@
-let eventApp = angular.module('eventApp', ['ngResources', 'ui.route']);
+let eventApp = angular.module('eventApp', ['ngResource', 'ui.router']);
 
 //angular routing view pages
 eventApp.config(['$stateProvider', ($stateProvider) => {
   $stateProvider
   .state('red', {
-    url:'/red.html'
-    templateUrl:"/Public/views/red.html"
+    url:'/red',
+    templateUrl:"/Public/views/red.html",
+    controller: () => console.log('we are in red')
   })
   .state('blue', {
-    url:'/blue.html'
+    url:'/blue',
     templateUrl:"/Public/views/blue.html"
   })
   .state('green', {
-    url:'/green.html'
+    url:'/green',
     templateUrl:"/Public/views/green.html"
   })
   .state('login', {
-    url:'/login.html'
+    url:'/login',
     templateUrl:"/Public/views/login.html"
   })
   .state('events', {
-    url:'/events.html'
+    url:'/events',
     templateUrl:"/Public/views/addEvent.html"
   })
 }]);
