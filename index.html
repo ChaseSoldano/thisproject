@@ -7,16 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- bootstrap -->
     <!-- Latest compiled and minified CSS -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+=======
+    <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
+>>>>>>> 79aa8ca5b62da6b64088697e0ed7e268b49974cd
 
     <!-- end bootstrap -->
 
     <!--style and script tags -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="Public\css\style.css">
     <link rel="stylesheet" href="Public\css\map.css">
+=======
+    <link rel="stylesheet" href="Public/css/style.css">
+    <link rel="stylesheet" href="Public/css/map.css">
+    <link rel="stylesheet" href="Public/css/nav-style.css">
+>>>>>>> 79aa8ca5b62da6b64088697e0ed7e268b49974cd
 
     <!---end of tags -->
 
@@ -25,15 +38,90 @@
   <body>
 
     <div class="header">
+<<<<<<< HEAD
       <div class="container" >
         <!--this is where navbar goes-->
             <nav class="nav navbar-default">
+=======
+       <div class="navbar-update">
+
+                     <nav class="navbar">
+                       <div class="toggle" onclick="openSlideMenu()">
+                             <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+                             <!-- menu icon bars -->
+                             <div class="bar1"></div>
+                               <div class="bar2"></div>
+                                 <div class="bar2"></div>
+                       </div>
+                       <!-- ^=hamburger icon -->
+                        <ul class="navbar-nav">
+                           <!-- <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Contact</a></li> -->
+                           <a ui-sref="red">Home</a>
+                           <a ui-sref="green">About</a>
+                           <a ui-sref="blue">Contact</a>
+                        </ul>
+
+                        <!-- <div class="user-dropdown">
+                            <div class="dropimg">
+
+                                        <img
+                                        src=
+                                        "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
+                                        class="dropbtn" width="44" height="44" >
+
+                            </div>
+                            <div class="dropdown-content">
+                                <a href="#">signout</a>
+                                <a href="#">account</a>
+                                <a href="#">setting</a>
+                            </div>
+
+                        </div> -->
+
+                        <div class="dropdown">
+                          <img
+                          src=
+                          "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
+                          class="dropbtn" onclick="myFunction()" width="44" height="44" >
+                          <div class="dropdown-content"  id="myDropdown">
+                            <a href="#">signout</a>
+                            <a href="#">account</a>
+                            <a href="#">setting</a>
+                          </div>
+                        </div>
+
+                        <ul id="sideBtns" class='nav navbar-nav navbar-right'>
+                             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                           </ul>
+                     </nav>
+              <!-- slide menu -- >
+              <!--side bar-->
+             <div id="side-menu" class="side-nav">
+                  <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                  <a href="#">Home</a>
+                  <a href="#">Account</a>
+                  <a href="#">Location</a>
+                  <a href="#">Sign Out</a>
+             </div>
+
+              <!--end slide menu -->
+
+       </div>
+      <div class="container" >
+        <!--this is where navbar goes-->
+
+            <!-- <nav class="nav navbar-default">
+>>>>>>> 79aa8ca5b62da6b64088697e0ed7e268b49974cd
                 <div class="container-fluid">
                     <a class="" href="index.html">Event Finder App</a>
                 </div>
 
                 <a ui-sref="red">Red</a>
                 <a ui-sref="green">Green</a>
+<<<<<<< HEAD
                 <a ui-sref="blue">Blue</a>
 
             </nav>
@@ -56,11 +144,27 @@
          <div id="map"></div>
 
         </div><br>end of googlemaps
+=======
+                <a ui-sref="blue">Blue</a> -->
+
+            </nav>
+        <!--end -->
+
+
+      <!--menu end -->
+
+
+    </div>
+
+  <h1>Test  Event Finder App <a ui-sref="events"><button type="button" name="">Events</button></a></h1>
+
+>>>>>>> 79aa8ca5b62da6b64088697e0ed7e268b49974cd
 
     <div class="eventlist"><!-- Theresa H new event list -->
         <div ui-view></div>
     </div>
 
+<<<<<<< HEAD
 
 
     <script src="node_modules\angular\angular.min.js"></script>
@@ -88,5 +192,16 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqHvoyWiV0-x4HgZUkjX9k19aaiwpapfs&callback=initMap"
     type="text/javascript"></script>
 
+=======
+    <script src="Public\frontend-js\slide.js"> </script>
+    <script src="Public\frontend-js\nav-dropdown.js">  </script>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="Public/app.js"></script>
+    <script type="text/javascript" src="Public/Resources/js/controllers.js"></script>
+
+>>>>>>> 79aa8ca5b62da6b64088697e0ed7e268b49974cd
   </body>
 </html>
