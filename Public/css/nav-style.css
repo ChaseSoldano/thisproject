@@ -24,7 +24,10 @@
 
 #sideBtns
 {
-  margin: 0 6em;
+  margin: -12px 6em;
+}
+#sideBtns li {
+  display: inline-block;
 }
 
 .toggle {
@@ -63,8 +66,8 @@
 }
 
 .navbar a:hover {
-    background-color: grey;
-    color: black;
+    background-color: #1b6a8a;
+    color: #fff;
 }
 
 .side-nav {
