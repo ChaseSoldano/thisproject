@@ -1,0 +1,48 @@
+body {
+    color:white;
+    font-family:arial;
+    font-size:1.2em;
+}
+form {
+    margin:0 auto;
+    padding:20px;
+    background:lightgrey;
+}
+/* Style the input */
+.input-group {
+    margin-top:10px;
+    width:60%;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+label, input {
+    flex-basis:100px;
+    color: black;
+    width: 75%;
+    font-size: 16px;
+    display:inline-table;
+    float: center;
+    text-align: center;
+}
+
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    float: right;
+    border: 1px solid darkgrey;
+  }
+  button:hover {
+    background-color: lightgrey;
+    color: black;
+}

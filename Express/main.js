@@ -1,25 +1,25 @@
 (function() {
-  angular.module('meanApp', ['ngRoute']);
+  angular.module('myApp', ['ngRoute']);
 
    function config($routeProvider, $locationProvider) {
      $routeProvider
        .when('/', {
-         templateUrl: 'home/home.view.html',
+         templateUrl: 'index.html',
          controller: 'homeCtrl',
          controllerAs: 'vm'
        })
        .when('/register', {
-         templateUrl: '/auth/register/register.view.html',
+         templateUrl: '/view/register.html',
          controller: 'registerCtrl',
          controllerAs: 'vm'
        })
        .when('/login', {
-         templateUrl: '/auth/login/login.view.html',
+         templateUrl: '/view/login.html',
          controller: 'loginCtrl',
          controllerAs: 'vm'
        })
        .when('/profile', {
-         templateUrl: '/profile/profile.view.html',
+         templateUrl: '/profile',
          controller: 'profileCtrl',
          controllerAs: 'vm'
        })
@@ -38,7 +38,7 @@
    }
 
    angular
-    .module('meanApp')
+    .module('myApp')
     .config(['$routeProvider', '$locationProvider', config])
     .run(['$rootScope', '$location', 'authentication', run]);
 })();

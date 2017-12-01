@@ -2,11 +2,9 @@
 <html  ng-app="eventApp">
   <head>
     <meta charset="utf-8">
-    <title>Event Finder App</title>
+    <title>Test | Event Finder App</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -15,13 +13,11 @@
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
 
     <!-- end bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!--style and script tags -->
     <link rel="stylesheet" href="Public/css/style.css">
-    <link rel="stylesheet" href="Public/css/map.css">
     <link rel="stylesheet" href="Public/css/nav-style.css">
+    <link rel="stylesheet" href="Public/css/map.css">
 
     <!---end of tags -->
 
@@ -30,7 +26,11 @@
   <body>
 
     <div class="header">
-    <div class="container" >
+      <div class="container" >
+        <!--this is where navbar goes-->
+
+
+
        <div class="navbar-update">
 
                      <nav class="navbar">
@@ -46,14 +46,14 @@
                         </ul>
 
                         <ul id="sideBtns" class='nav navbar-nav navbar-right'>
-                              <div class="dropdown-menu">
+                              <!-- <div class="dropdown-menu">
                                 <li><a href="#">  <img src="http://placehold.it/18x18" class="profile-image img-circle" width="30px" height="30px"><span class="caret"></span></a></li>
                                 <ul class="dropdown-content">
                                   <li>sign out</li>
                                   <li>location</li>
                                   <li>account</li>
                                 </ul>
-                              </div>
+                              </div> -->
                              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                              <!-- where the account dropdown shows other option -->
@@ -76,27 +76,14 @@
 
        </div>
 
-        <!--this is where navbar goes-->
-
-            <!-- <nav class="nav navbar-default">
-                <div class="container-fluid">
-                    <a class="" href="index.html">Event Finder App</a>
-                </div>
-
-                <a ui-sref="red">Red</a>
-                <a ui-sref="green">Green</a>
-                <a ui-sref="blue">Blue</a> -->
-
-
-        <!--end -->
-
-
-      <!--menu end -->
 
 
     </div>
 
+    </div>
+
   <h1> Event Finder App <a ui-sref="events"><br><button type="button" class="btn btn-default" name="">Events</button></a></h1>
+
 
 
     <div class="eventlist"><!-- Theresa H new event list -->
@@ -104,14 +91,16 @@
     </div>
 
 
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="Public\frontend-js\slide.js">  </script>
+
+
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="Public/app.js"></script>
     <script type="text/javascript" src="Public/Resources/js/controllers.js"></script>
-
-
-        <script src="Public\frontend-js\slide.js"> </script>
 
   </body>
 </html>
