@@ -1,0 +1,18 @@
+<div ng-controller="eventsController">
+  <h2>There are {{events.length}} events</h2>
+  <ul>
+    <li ng-repeat="event in events">{{event.name}} {{event.date}}</li>
+  </ul>
+
+  <form ng-submit="addEvent()">
+    <label for="name">Event Name</label>
+    <input ng-model="name">
+    <label for="date">Event Date</label>
+    <input ng-model="date">
+    <label for="location">Event location</label>
+    <input ng-model="location">
+    <label for="description">Event Description</label>
+    <input ng-model="description">
+    <button type="submit">Add</button>
+  </form>
+</div>
