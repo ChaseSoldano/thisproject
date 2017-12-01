@@ -12,6 +12,10 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
 
+    <!--- font awesome icon -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <!-- end bootstrap -->
 
     <!--style and script tags -->
@@ -46,17 +50,11 @@
                         </ul>
 
                         <ul id="sideBtns" class='nav navbar-nav navbar-right'>
-                              <!-- <div class="dropdown-menu">
-                                <li><a href="#">  <img src="http://placehold.it/18x18" class="profile-image img-circle" width="30px" height="30px"><span class="caret"></span></a></li>
-                                <ul class="dropdown-content">
-                                  <li>sign out</li>
-                                  <li>location</li>
-                                  <li>account</li>
-                                </ul>
-                              </div> -->
-                             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                             <!-- where the account dropdown shows other option -->
+
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                <!-- where the account dropdown shows other option -->
+
 
                              </ul>
 
@@ -78,17 +76,19 @@
 
 
 
-    </div>
+
+    <h1> Event Finder App <a ui-sref="events"><br><button type="button" class="btn btn-default" name="">Events</button></a></h1>
+
+
+
+      <div class="eventlist"><!-- Theresa H new event list -->
+          <div ui-view></div>
+      </div>
+
+          </div>
 
     </div>
 
-  <h1> Event Finder App <a ui-sref="events"><br><button type="button" class="btn btn-default" name="">Events</button></a></h1>
-
-
-
-    <div class="eventlist"><!-- Theresa H new event list -->
-        <div ui-view></div>
-    </div>
 
 
 

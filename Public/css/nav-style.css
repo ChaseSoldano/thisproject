@@ -29,9 +29,10 @@
 
 .toggle {
   float: left;
-  width: 100px;
+  width: 10%;
   padding: 6px 12px;
   background-color: #1c356b;
+  color: #fff;
   box-sizing: border-box;
   border-radius: 15%;
 }
