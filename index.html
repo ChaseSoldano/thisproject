@@ -2,9 +2,11 @@
 <html  ng-app="eventApp">
   <head>
     <meta charset="utf-8">
-    <title>Test | Event Finder App</title>
+    <title>Event Finder App</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -13,6 +15,8 @@
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
 
     <!-- end bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!--style and script tags -->
     <link rel="stylesheet" href="Public/css/style.css">
@@ -26,60 +30,38 @@
   <body>
 
     <div class="header">
+    <div class="container" >
        <div class="navbar-update">
 
                      <nav class="navbar">
                        <div class="toggle" onclick="openSlideMenu()">
                              <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
                              <!-- menu icon bars -->
-                             <div class="bar1"></div>
-                               <div class="bar2"></div>
-                                 <div class="bar2"></div>
                        </div>
                        <!-- ^=hamburger icon -->
                         <ul class="navbar-nav">
-                           <!-- <li><a href="#">Home</a></li>
-                           <li><a href="#">About</a></li>
-                           <li><a href="#">Contact</a></li> -->
                            <a ui-sref="red">Home</a>
                            <a ui-sref="green">About</a>
                            <a ui-sref="blue">Contact</a>
                         </ul>
 
-                        <!-- <div class="user-dropdown">
-                            <div class="dropimg">
-
-                                        <img
-                                        src=
-                                        "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
-                                        class="dropbtn" width="44" height="44" >
-
-                            </div>
-                            <div class="dropdown-content">
-                                <a href="#">signout</a>
-                                <a href="#">account</a>
-                                <a href="#">setting</a>
-                            </div>
-
-                        </div> -->
-
-                        <div class="dropdown">
-                          <img
-                          src=
-                          "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
-                          class="dropbtn" onclick="myFunction()" width="44" height="44" >
-                          <div class="dropdown-content"  id="myDropdown">
-                            <a href="#">signout</a>
-                            <a href="#">account</a>
-                            <a href="#">setting</a>
-                          </div>
-                        </div>
-
                         <ul id="sideBtns" class='nav navbar-nav navbar-right'>
+                              <div class="dropdown-menu">
+                                <li><a href="#">  <img src="http://placehold.it/18x18" class="profile-image img-circle" width="30px" height="30px"><span class="caret"></span></a></li>
+                                <ul class="dropdown-content">
+                                  <li>sign out</li>
+                                  <li>location</li>
+                                  <li>account</li>
+                                </ul>
+                              </div>
                              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                           </ul>
-                     </nav>
+                             <!-- where the account dropdown shows other option -->
+
+                             </ul>
+
+
+                               </nav>
               <!-- slide menu -- >
               <!--side bar-->
              <div id="side-menu" class="side-nav">
@@ -93,7 +75,7 @@
               <!--end slide menu -->
 
        </div>
-      <div class="container" >
+
         <!--this is where navbar goes-->
 
             <!-- <nav class="nav navbar-default">
@@ -105,7 +87,7 @@
                 <a ui-sref="green">Green</a>
                 <a ui-sref="blue">Blue</a> -->
 
-            </nav>
+
         <!--end -->
 
 
@@ -114,21 +96,22 @@
 
     </div>
 
-  <h1>Test  Event Finder App <a ui-sref="events"><button type="button" name="">Events</button></a></h1>
+  <h1> Event Finder App <a ui-sref="events"><br><button type="button" class="btn btn-default" name="">Events</button></a></h1>
 
 
     <div class="eventlist"><!-- Theresa H new event list -->
         <div ui-view></div>
     </div>
 
-    <script src="Public\frontend-js\slide.js"> </script>
-    <script src="Public\frontend-js\nav-dropdown.js">  </script>
 
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-resource/angular-resource.min.js"></script>
     <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="Public/app.js"></script>
     <script type="text/javascript" src="Public/Resources/js/controllers.js"></script>
+
+
+        <script src="Public\frontend-js\slide.js"> </script>
 
   </body>
 </html>
