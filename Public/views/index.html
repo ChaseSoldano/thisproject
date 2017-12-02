@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html  ng-app="eventApp">
   <head>
     <meta charset="utf-8">
@@ -12,17 +13,12 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
 
-    <!--- font awesome icon -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
     <!-- end bootstrap -->
 
     <!--style and script tags -->
     <link rel="stylesheet" href="Public/css/style.css">
-    <link rel="stylesheet" href="Public/css/nav-style.css">
     <link rel="stylesheet" href="Public/css/map.css">
-
+    <link rel="stylesheet" href="Public/css/nav-style.css">
     <!---end of tags -->
 
   </head>
@@ -30,32 +26,38 @@
   <body>
 
     <div class="header">
-      <div class="container" >
-        <!--this is where navbar goes-->
-
-
-
        <div class="navbar-update">
 
                      <nav class="navbar">
                        <div class="toggle" onclick="openSlideMenu()">
                              <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
                              <!-- menu icon bars -->
+                             <div class="bar1"></div>
+                               <div class="bar2"></div>
+                                 <div class="bar2"></div>
                        </div>
                        <!-- ^=hamburger icon -->
                         <ul class="navbar-nav">
+                           <!-- <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Contact</a></li> -->
                            <a ui-sref="red">Home</a>
                            <a ui-sref="green">About</a>
                            <a ui-sref="blue">Contact</a>
                         </ul>
-                          <div id="sideBtns" class='nav navbar-nav navbar-right'>
-                                   <ul >
-                                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                                     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                                     <!-- where the account dropdown shows other option -->
-                                   </ul>
-                                 </div>
-                               </nav>
+
+                        <div class="user-header-drop down">
+                              <img
+                              src=
+                              "https://gravatar.com/avatar/4c240e96da49af9f1e7b2a3727ba49da?s=80&amp;d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
+                              width="44" height="44" >
+                        </div>
+
+                        <ul id="sideBtns" class='nav navbar-nav navbar-right'>
+                             <li><a href="Public/views/register.view.html"><span class="glyphicon glyphicon-user"></span>Sign Up </a></li>
+                             <li><a href="Public/views/login.view.html"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+                           </ul>
+                     </nav>
               <!-- slide menu -- >
               <!--side bar-->
              <div id="side-menu" class="side-nav">
@@ -69,32 +71,49 @@
               <!--end slide menu -->
 
        </div>
+      <div class="container" >
+        <!--this is where navbar goes-->
+
+            <!-- <nav class="nav navbar-default">
+                <div class="container-fluid">
+                    <a class="" href="index.html">Event Finder App</a>
+                </div>
+
+                <a ui-sref="red">Red</a>
+                <a ui-sref="green">Green</a>
+                <a ui-sref="blue">Blue</a> -->
+
+            </nav>
+        <!--end -->
 
 
+      <!--menu end -->
 
-
-    <h1> Event Finder App <a ui-sref="events"><br><button type="button" class="btn btn-default" name="">Events</button></a></h1>
-
-
-
-      <div class="eventlist"><!-- Theresa H new event list -->
-          <div ui-view></div>
-      </div>
-
-          </div>
 
     </div>
 
+  <h1>Test  Event Finder App <a ui-sref="events"><button type="button" name="">Events</button></a></h1>
 
 
+    <div class="eventlist"><!-- Theresa H new event list -->
+        <div ui-view></div>
+    </div>
 
-    <script src="Public\frontend-js\slide.js">  </script>
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width='250px';
+              document.getElementById('main').style.marginLeft='250px';
+        }
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width='0';
+              document.getElementById('main').style.marginLeft='0';
+        }
+    </script>
 
 
-
-    <script src="node_modules/angular/angular.js"></script>
-    <script src="node_modules/angular-resource/angular-resource.js"></script>
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="Public/app.js"></script>
     <script type="text/javascript" src="Public/Resources/js/controllers.js"></script>
 

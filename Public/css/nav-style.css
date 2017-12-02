@@ -1,51 +1,26 @@
- body
+body
 {
    font-family: sans-serif, arial;
    padding: 0;
    margin: 0;
    overflow-x: hidden;
 }
-/*img {*/
-      /*position: relative;
-      left: 20em;
-      bottom: 3em;
-      border-radius: 50%;
-      cursor: pointer;
-}*/
-/*this will be for when the user clicks on ACC IMG they have the options.*/
-
-
-#user-img {
-            position: absolute;
-            left: 15px;
-            top: 14px;
-            border-radius: 50%
-}
 
 #sideBtns
 {
-  margin: -12px 6em;
-}
-#sideBtns li {
-  display: inline-block;
+  margin: 0 6em;
+  position: relative;
+  bottom: 3em;
 }
 
 .toggle {
-  float: left;
-  width: 10%;
-  padding: 6px 12px;
-  background-color: #1c356b;
-  color: #fff;
-  box-sizing: border-box;
-  border-radius: 15%;
+    padding: 6px 12px;
 }
-.toggle:hover {
-    background: red;
-}
+
 .navbar {
   background-color: #3b5998;
   overflow: hidden;
-  /*height: 63px;*/
+  height: 63px;
 }
 
 .navbar a {
@@ -57,6 +32,8 @@
   text-decoration: none;
   font-size: 17px;
   position: relative;
+  position: relative;
+    bottom: 3em;
     left: 3em;
 }
 
@@ -66,8 +43,8 @@
 }
 
 .navbar a:hover {
-    background-color: #1b6a8a;
-    color: #fff;
+    background-color: grey;
+    color: black;
 }
 
 .side-nav {
@@ -110,13 +87,14 @@
     overflow: hidden;
     width: 100%;
 }
-@media(max-width:568px) {
 
-  ul {
-    width: 100%
+@media(max-width:568px) {
+    .navbar-nav {
+          display: none;
     }
-    ul li {
-      text-align: center;
-      display: block;
-    }
+
+}
+
+@media(min-width:568px) {
+
 }
